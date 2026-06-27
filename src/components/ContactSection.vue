@@ -4,7 +4,7 @@ import { t, contact, cvFile } from '../composables/usePortfolioState'
 
 <template>
   <section id="tcontact" class="border-t" style="border-color: var(--line); background: var(--panel)">
-    <div class="mx-auto max-w-[1120px] px-7" style="padding-top: clamp(56px,9vw,110px); padding-bottom: clamp(56px,9vw,110px)">
+    <div class="mx-auto max-w-280 px-7" style="padding-top: clamp(56px,9vw,110px); padding-bottom: clamp(56px,9vw,110px)">
       <div
         v-motion
         :initial="{ opacity: 0, y: 16 }"
@@ -35,7 +35,7 @@ import { t, contact, cvFile } from '../composables/usePortfolioState'
       >
         <a
           :href="`mailto:${contact.email}`"
-          class="rounded-lg no-underline font-mono text-[14px] font-semibold px-6 py-[13px] transition-opacity hover:opacity-80"
+          class="rounded-1.75 no-underline font-mono text-[14px] font-semibold px-6 py-3.25 transition-opacity hover:opacity-80"
           style="background: var(--accent); color: var(--accent-ink)"
         >
           {{ contact.email }}
@@ -43,7 +43,7 @@ import { t, contact, cvFile } from '../composables/usePortfolioState'
         <a
           :href="cvFile"
           download
-          class="rounded-lg border no-underline font-mono text-[14px] font-medium px-5 py-[13px] transition-opacity hover:opacity-70"
+          class="rounded-1.75 border no-underline font-mono text-[14px] font-medium px-5 py-3.25 transition-opacity hover:opacity-70"
           style="color: var(--ink); border-color: var(--line)"
         >
           ↓ {{ t.cta.download }}

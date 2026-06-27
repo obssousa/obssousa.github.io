@@ -26,7 +26,7 @@ function handleThemeToggle() {
     "
   >
     <div
-      class="mx-auto flex max-w-[1120px] items-center justify-between gap-6 px-7 py-3.5"
+      class="mx-auto flex max-w-280 items-center justify-between gap-6 px-7 py-3.5"
     >
       <!-- Logo -->
       <a
@@ -35,7 +35,7 @@ function handleThemeToggle() {
         style="color: var(--ink)"
       >
         <span style="color: var(--accent)">~/</span>bruno-sousa<span
-          class="animate-blink inline-block h-[15px] w-2"
+          class="animate-blink inline-block h-3.75 w-2"
           style="background: var(--accent)"
         ></span>
       </a>

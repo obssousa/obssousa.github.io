@@ -3,7 +3,7 @@ import { t } from '../composables/usePortfolioState'
 </script>
 
 <template>
-  <section id="tskills" class="mx-auto max-w-[1120px] px-7" style="padding-top: clamp(48px,7vw,84px); padding-bottom: clamp(48px,7vw,84px)">
+  <section id="tskills" class="mx-auto max-w-280 px-7" style="padding-top: clamp(48px,7vw,84px); padding-bottom: clamp(48px,7vw,84px)">
     <!-- Section header -->
     <div
       v-motion
@@ -35,11 +35,11 @@ import { t } from '../composables/usePortfolioState'
         <div class="mb-4 font-mono text-[12px]" style="color: var(--accent)">
           {{ cat.label }}
         </div>
-        <div class="flex flex-wrap gap-[7px]">
+        <div class="flex flex-wrap gap-1.75">
           <span
             v-for="item in cat.items"
             :key="item"
-            class="rounded-[6px] border font-mono text-[12px] px-2.5 py-[5px]"
+            class="rounded-md border font-mono text-[12px] px-2.5 py-1.25"
             style="color: var(--ink); background: var(--surface); border-color: var(--line)"
           >
             {{ item }}

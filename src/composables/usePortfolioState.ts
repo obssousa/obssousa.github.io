@@ -1,8 +1,16 @@
 import { ref, computed } from 'vue'
 import { DATA } from '../data/cv-data'
 
+// Detect browser language — default to PT for any Portuguese locale, EN otherwise
+function detectLang(): 'en' | 'pt' {
+  if (typeof window === 'undefined') return 'en'
+  const preferred = navigator.languages ?? [navigator.language]
+  const isPortuguese = preferred.some((l) => l.toLowerCase().startsWith('pt'))
+  return isPortuguese ? 'pt' : 'en'
+}
+
 // Module-level reactive state — safe for client:only rendering
-export const lang = ref<'en' | 'pt'>('en')
+export const lang = ref<'en' | 'pt'>(detectLang())
 export const theme = ref<'dark' | 'light'>('dark')
 
 export const t = computed(() => DATA[lang.value])

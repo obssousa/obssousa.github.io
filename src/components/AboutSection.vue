@@ -1,9 +1,18 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import { t } from '../composables/usePortfolioState'
+
+const stackRows = computed(() => {
+  const tags = t.value.stackTags
+  const size = 3
+  return Array.from({ length: Math.ceil(tags.length / size) }, (_, i) =>
+    tags.slice(i * size, i * size + size),
+  )
+})
 </script>
 
 <template>
-  <section id="tabout" class="mx-auto max-w-[1120px] px-7" style="padding-top: clamp(48px,7vw,84px); padding-bottom: clamp(48px,7vw,84px)">
+  <section id="tabout" class="mx-auto max-w-280 px-7" style="padding-top: clamp(48px,7vw,84px); padding-bottom: clamp(48px,7vw,84px)">
     <!-- Section header -->
     <div
       v-motion
@@ -61,20 +70,11 @@ import { t } from '../composables/usePortfolioState'
           class="rounded-xl border p-5 font-mono text-[12.5px] leading-[1.9]"
           style="border-color: var(--line); background: var(--panel); color: var(--muted)"
         >
-          <div>
-            <span style="color: var(--accent2)">vue</span> ·
-            <span style="color: var(--accent2)">react</span> ·
-            <span style="color: var(--accent2)">typescript</span>
-          </div>
-          <div>
-            <span style="color: var(--accent2)">astro</span> ·
-            <span style="color: var(--accent2)">nuxt</span> ·
-            <span style="color: var(--accent2)">node</span>
-          </div>
-          <div>
-            <span style="color: var(--accent2)">aws</span> ·
-            <span style="color: var(--accent2)">ci/cd</span> ·
-            <span style="color: var(--accent2)">tdd</span>
+          <div v-for="(row, i) in stackRows" :key="i">
+            <template v-for="(tag, j) in row" :key="tag">
+              <span style="color: var(--accent2)">{{ tag }}</span
+              ><template v-if="j < row.length - 1"> · </template>
+            </template>
           </div>
         </div>
       </div>

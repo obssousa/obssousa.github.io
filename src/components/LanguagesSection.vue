@@ -3,7 +3,7 @@ import { t, languages } from '../composables/usePortfolioState'
 </script>
 
 <template>
-  <section id="tlang" class="mx-auto max-w-[1120px] px-7" style="padding-top: clamp(48px,7vw,84px); padding-bottom: clamp(48px,7vw,84px)">
+  <section id="tlang" class="mx-auto max-w-280 px-7" style="padding-top: clamp(48px,7vw,84px); padding-bottom: clamp(48px,7vw,84px)">
     <!-- Section header -->
     <div
       v-motion
@@ -42,11 +42,11 @@ import { t, languages } from '../composables/usePortfolioState'
         </div>
 
         <!-- Progress cells -->
-        <div class="flex gap-[5px]">
+        <div class="flex gap-1.25">
           <span
             v-for="(cell, idx) in lng.cells"
             :key="idx"
-            class="h-2 flex-1 rounded-[2px]"
+            class="h-2 flex-1 rounded-sm"
             :style="{ background: cell.filled ? 'var(--accent)' : 'var(--line)' }"
           ></span>
         </div>

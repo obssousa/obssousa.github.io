@@ -40,6 +40,7 @@ export interface Translations {
     contact: string
   }
   yearsLabel: string
+  stackTags: string[]
 
   summary: string
   summary2: string
@@ -98,11 +99,12 @@ export const DATA: CVData = {
       contact: 'Contact',
     },
     yearsLabel: 'years building for the web',
+    stackTags: ['vue', 'react', 'typescript', 'astro', 'nuxt', 'node', 'express', 'mongo','aws', 'ci/cd', 'tdd'],
 
     summary:
       'Software Engineer with 6+ years of experience specializing in front-end architecture and high-performance web applications. Deep expertise across the Vue.js ecosystem (Vue 2/3, Nuxt) combined with a framework-agnostic approach spanning React, Astro and Angular. Proven track record leading large-scale modernizations — JavaScript-to-TypeScript migrations, Vue 2→3 upgrades and Nuxt→Astro transitions — and designing reusable component libraries that improve developer experience and delivery speed.',
     summary2:
-      'Strong advocate of TDD and automated testing (Cypress, Jest), with solid REST and GraphQL integration experience. Experienced across the full stack: back-end work with Node.js, Express and MongoDB, and hands-on AWS delivery (CloudFront, S3, Route 53, CodePipeline, CloudWatch) with reliable CI/CD pipelines.',
+      'Strong advocate of TDD and automated testing (Cypress, Jest), with solid REST and GraphQL integration experience. Comfortable working across the stack when needed — back-end exposure with Node.js, Express and MongoDB — with hands-on AWS delivery (CloudFront, S3, Route 53, CodePipeline, CloudWatch) and reliable CI/CD pipelines.',
     present: 'Present',
     skills: [
       {
@@ -201,11 +203,12 @@ export const DATA: CVData = {
       contact: 'Contato',
     },
     yearsLabel: 'anos construindo para a web',
+    stackTags: ['vue', 'react', 'typescript', 'astro', 'nuxt', 'node', 'aws', 'ci/cd', 'tdd'],
 
     summary:
       'Engenheiro de Software com mais de 6 anos de experiência, especializado em arquitetura front-end e aplicações web de alta performance. Profundo domínio do ecossistema Vue.js (Vue 2/3, Nuxt) aliado a uma abordagem agnóstica de frameworks que abrange React, Astro e Angular. Histórico comprovado liderando modernizações de larga escala — migrações de JavaScript para TypeScript, upgrades de Vue 2→3 e transições de Nuxt→Astro — e projetando bibliotecas de componentes reutilizáveis que melhoram a experiência do desenvolvedor e a velocidade de entrega.',
     summary2:
-      'Defensor de TDD e testes automatizados (Cypress, Jest), com sólida experiência em integração REST e GraphQL. Experiente em toda a stack: back-end com Node.js, Express e MongoDB, e entregas hands-on na AWS (CloudFront, S3, Route 53, CodePipeline, CloudWatch) com pipelines de CI/CD confiáveis.',
+      'Defensor de TDD e testes automatizados (Cypress, Jest), com sólida experiência em integração REST e GraphQL. Confortável para atuar em outras partes da stack quando necessário — com exposição ao back-end em Node.js, Express e MongoDB — além de entregas hands-on na AWS (CloudFront, S3, Route 53, CodePipeline, CloudWatch) com pipelines de CI/CD confiáveis.',
     present: 'Atual',
     skills: [
       {

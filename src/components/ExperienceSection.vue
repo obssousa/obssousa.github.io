@@ -3,7 +3,7 @@ import { t } from '../composables/usePortfolioState'
 </script>
 
 <template>
-  <section id="texp" class="mx-auto max-w-[1120px] px-7" style="padding-top: clamp(48px,7vw,84px); padding-bottom: clamp(48px,7vw,84px)">
+  <section id="texp" class="mx-auto max-w-280 px-7" style="padding-top: clamp(48px,7vw,84px); padding-bottom: clamp(48px,7vw,84px)">
     <!-- Section header -->
     <div
       v-motion
@@ -51,7 +51,7 @@ import { t } from '../composables/usePortfolioState'
           <span class="text-[13px]" style="color: var(--muted)">{{ exp.meta }}</span>
           <span
             v-if="exp.current"
-            class="rounded-[5px] font-mono text-[11px] px-2 py-0.5"
+            class="rounded-1.25 font-mono text-[11px] px-2 py-0.5"
             style="color: var(--accent-ink); background: var(--accent)"
           >
             {{ t.present }}
