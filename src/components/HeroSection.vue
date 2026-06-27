@@ -87,30 +87,5 @@ import { t, name, photo, cvFile } from '../composables/usePortfolioState'
       </div>
     </div>
 
-    <!-- Availability badges -->
-    <div
-      v-motion
-      :initial="{ opacity: 0, y: 26 }"
-      :enter="{ opacity: 1, y: 0, transition: { duration: 1100, delay: 500 } }"
-      class="flex flex-wrap gap-2.5"
-      style="margin-top: clamp(34px,5vw,52px)"
-    >
-      <span
-        class="inline-flex items-center gap-2 rounded-[7px] border font-mono text-[12.5px] px-3.5 py-2"
-        style="color: var(--muted); border-color: var(--line); background: var(--panel)"
-      >
-        <span
-          class="inline-block size-[7px] rounded-full"
-          style="background: var(--accent); box-shadow: 0 0 8px var(--accent)"
-        ></span>
-        {{ t.available }}
-      </span>
-      <span
-        class="inline-flex items-center gap-2 rounded-[7px] border font-mono text-[12.5px] px-3.5 py-2"
-        style="color: var(--muted); border-color: var(--line); background: var(--panel)"
-      >
-        📍 {{ t.location }}
-      </span>
-    </div>
   </header>
 </template>

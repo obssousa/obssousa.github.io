@@ -9,7 +9,7 @@ export const t = computed(() => DATA[lang.value])
 export const contact = DATA.contact
 export const name = DATA.name
 export const photo = DATA.photo
-export const cvFile = DATA.cvFile
+export const cvFile = computed(() => t.value.cvFile)
 
 export const otherLang = computed(() => (lang.value === 'en' ? 'PT' : 'EN'))
 export const themeIcon = computed(() => (theme.value === 'dark' ? '☀' : '☾'))

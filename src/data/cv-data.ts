@@ -29,6 +29,7 @@ export interface Translations {
   role: string
   stack: string
   location: string
+  cvFile: string
   cta: { download: string; getInTouch: string; viewWork: string }
   sections: {
     about: string
@@ -39,7 +40,7 @@ export interface Translations {
     contact: string
   }
   yearsLabel: string
-  available: string
+
   summary: string
   summary2: string
   present: string
@@ -64,7 +65,6 @@ export interface CVData {
   name: string
   handle: string
   photo: string
-  cvFile: string
   contact: ContactInfo
   en: Translations
   pt: Translations
@@ -73,8 +73,7 @@ export interface CVData {
 export const DATA: CVData = {
   name: 'Bruno Sousa',
   handle: 'obssousa',
-  photo: '/bruno.jpeg',
-  cvFile: '/Bruno_Sousa_CV.pdf',
+  photo: '/profile.jpeg',
   contact: {
     email: 'obssousa@pm.me',
     phone: '+55 91 98503-7834',
@@ -88,6 +87,7 @@ export const DATA: CVData = {
     role: 'Senior Front-End Engineer',
     stack: 'Vue.js · React · TypeScript',
     location: 'Belém, Brazil',
+    cvFile: '/Bruno_Sousa_CV_EN.pdf',
     cta: { download: 'Download CV', getInTouch: 'Get in touch', viewWork: 'Experience' },
     sections: {
       about: 'About',
@@ -98,7 +98,7 @@ export const DATA: CVData = {
       contact: 'Contact',
     },
     yearsLabel: 'years building for the web',
-    available: 'Open to new opportunities',
+
     summary:
       'Software Engineer with 6+ years of experience specializing in front-end architecture and high-performance web applications. Deep expertise across the Vue.js ecosystem (Vue 2/3, Nuxt) combined with a framework-agnostic approach spanning React, Astro and Angular. Proven track record leading large-scale modernizations — JavaScript-to-TypeScript migrations, Vue 2→3 upgrades and Nuxt→Astro transitions — and designing reusable component libraries that improve developer experience and delivery speed.',
     summary2:
@@ -184,12 +184,13 @@ export const DATA: CVData = {
       { name: 'Portuguese', level: 'Native', value: 100 },
       { name: 'English', level: 'Professional working', value: 80 },
     ],
-    contactLede: 'Open to new opportunities. Let\'s talk.',
+    contactLede: 'Let\'s talk.',
   },
   pt: {
     role: 'Engenheiro Front-End Sênior',
     stack: 'Vue.js · React · TypeScript',
     location: 'Belém, Brasil',
+    cvFile: '/Bruno_Sousa_CV_PT.pdf',
     cta: { download: 'Baixar CV', getInTouch: 'Entrar em contato', viewWork: 'Experiência' },
     sections: {
       about: 'Sobre',
@@ -200,7 +201,7 @@ export const DATA: CVData = {
       contact: 'Contato',
     },
     yearsLabel: 'anos construindo para a web',
-    available: 'Aberto a novas oportunidades',
+
     summary:
       'Engenheiro de Software com mais de 6 anos de experiência, especializado em arquitetura front-end e aplicações web de alta performance. Profundo domínio do ecossistema Vue.js (Vue 2/3, Nuxt) aliado a uma abordagem agnóstica de frameworks que abrange React, Astro e Angular. Histórico comprovado liderando modernizações de larga escala — migrações de JavaScript para TypeScript, upgrades de Vue 2→3 e transições de Nuxt→Astro — e projetando bibliotecas de componentes reutilizáveis que melhoram a experiência do desenvolvedor e a velocidade de entrega.',
     summary2:
@@ -292,6 +293,6 @@ export const DATA: CVData = {
       { name: 'Português', level: 'Nativo', value: 100 },
       { name: 'Inglês', level: 'Profissional', value: 80 },
     ],
-    contactLede: 'Aberto a novas oportunidades. Vamos conversar.',
+    contactLede: 'Vamos conversar.',
   },
 }
