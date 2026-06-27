@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm info *)",
+      "Bash(node -e \"const v=require\\('fs'\\).readFileSync\\('/dev/stdin','utf8'\\); const arr=JSON.parse\\(v\\); const v7=arr.filter\\(x=>x.startsWith\\('7.'\\)\\); console.log\\('Latest v7:', v7[v7.length-1]\\); console.log\\('All v7:', v7.slice\\(-5\\).join\\(', '\\)\\)\")"
+    ]
+  }
+}

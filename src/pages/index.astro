@@ -1,0 +1,9 @@
+---
+import Layout from '../layouts/Layout.astro'
+import PortfolioApp from '../components/PortfolioApp.vue'
+import '../styles/global.css'
+---
+
+<Layout>
+  <PortfolioApp client:only="vue" />
+</Layout>
