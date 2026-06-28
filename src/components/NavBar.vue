@@ -17,55 +17,42 @@ function handleThemeToggle() {
 </script>
 
 <template>
-  <nav
-    class="sticky top-0 z-50 border-b"
-    style="
-      backdrop-filter: blur(12px);
-      background: color-mix(in srgb, var(--bg) 82%, transparent);
-      border-color: var(--line);
-    "
-  >
+  <nav class="nav-bg sticky top-0 z-50 border-b border-line backdrop-blur-[12px]">
     <div
       class="mx-auto flex max-w-280 items-center justify-between gap-6 px-7 py-3.5"
     >
-      <!-- Logo -->
       <a
         href="#ttop"
-        class="flex items-center gap-2.5 no-underline font-mono text-sm font-semibold"
-        style="color: var(--ink)"
+        class="flex items-center gap-2.5 no-underline font-mono text-sm font-semibold text-ink"
       >
-        <span style="color: var(--accent)">~/</span>bruno-sousa<span
-          class="animate-blink inline-block h-3.75 w-2"
-          style="background: var(--accent)"
+        <span class="text-accent">~/</span>bruno-sousa<span
+          class="animate-blink inline-block h-3.75 w-2 bg-accent"
         ></span>
       </a>
 
-      <!-- Links -->
       <div class="hidden items-center gap-6 font-mono text-[13px] sm:flex">
-        <a href="#tabout" class="no-underline transition-colors hover:opacity-80" style="color: var(--muted)">
+        <a href="#tabout" class="no-underline text-muted transition-colors hover:opacity-80">
           {{ t.sections.about }}
         </a>
-        <a href="#texp" class="no-underline transition-colors hover:opacity-80" style="color: var(--muted)">
+        <a href="#texp" class="no-underline text-muted transition-colors hover:opacity-80">
           {{ t.sections.experience }}
         </a>
-        <a href="#tskills" class="no-underline transition-colors hover:opacity-80" style="color: var(--muted)">
+        <a href="#tskills" class="no-underline text-muted transition-colors hover:opacity-80">
           {{ t.sections.skills }}
         </a>
-        <a href="#tlang" class="no-underline transition-colors hover:opacity-80" style="color: var(--muted)">
+        <a href="#tlang" class="no-underline text-muted transition-colors hover:opacity-80">
           {{ t.sections.languages }}
         </a>
-        <a href="#tcontact" class="no-underline transition-colors hover:opacity-80" style="color: var(--muted)">
+        <a href="#tcontact" class="no-underline text-muted transition-colors hover:opacity-80">
           {{ t.sections.contact }}
         </a>
       </div>
 
-      <!-- Actions -->
       <div class="flex items-center gap-2">
         <button
           id="lang-toggle-btn"
-          class="toggle-btn cursor-pointer rounded-md border px-2.5 py-1.5 font-mono text-xs"
+          class="toggle-btn cursor-pointer rounded-md border border-line bg-transparent px-2.5 py-1.5 font-mono text-xs text-ink"
           :class="{ 'btn-pulse': langAnimating }"
-          style="border-color: var(--line); background: transparent; color: var(--ink)"
           @click="handleLangToggle"
           @animationend="langAnimating = false"
         >
@@ -74,9 +61,8 @@ function handleThemeToggle() {
         <button
           id="theme-toggle-btn"
           aria-label="Toggle theme"
-          class="toggle-btn grid size-8 cursor-pointer place-items-center rounded-md border text-[13px]"
+          class="toggle-btn grid size-8 cursor-pointer place-items-center rounded-md border border-line bg-transparent text-[13px] text-ink"
           :class="{ 'btn-spin': themeAnimating }"
-          style="border-color: var(--line); background: transparent; color: var(--ink)"
           @click="handleThemeToggle"
           @animationend="themeAnimating = false"
         >
@@ -85,8 +71,7 @@ function handleThemeToggle() {
         <a
           :href="cvFile"
           download
-          class="inline-flex items-center gap-1.5 rounded-md no-underline font-mono text-[12.5px] font-semibold px-3.5 py-2 transition-opacity hover:opacity-80"
-          style="background: var(--accent); color: var(--accent-ink)"
+          class="inline-flex items-center gap-1.5 rounded-md no-underline font-mono text-[12.5px] font-semibold px-3.5 py-2 bg-accent text-accent-ink transition-opacity hover:opacity-80"
         >
           {{ t.cta.download }}
         </a>
@@ -96,6 +81,10 @@ function handleThemeToggle() {
 </template>
 
 <style scoped>
+.nav-bg {
+  background: color-mix(in srgb, var(--bg) 82%, transparent);
+}
+
 .toggle-btn {
   transition: opacity 0.2s ease, transform 0.2s ease;
 }

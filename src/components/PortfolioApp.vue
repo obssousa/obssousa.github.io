@@ -13,8 +13,7 @@ import FooterSection from './FooterSection.vue'
 <template>
   <div
     :data-theme="theme"
-    class="grid-bg min-h-screen overflow-x-hidden font-geist transition-[background,color] duration-500"
-    style="color: var(--ink)"
+    class="grid-bg min-h-screen overflow-x-hidden font-geist text-ink transition-[background,color] duration-500"
   >
     <NavBar />
 
