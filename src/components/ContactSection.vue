@@ -68,10 +68,15 @@ import { t, contact, cvFile } from '../composables/usePortfolioState'
           <div class="mb-1.5 font-mono text-[11px] text-muted">LinkedIn</div>
           <div class="font-mono text-[13.5px]">{{ contact.linkedin }}</div>
         </a>
-        <div class="p-5 bg-panel">
-          <div class="mb-1.5 font-mono text-[11px] text-muted">Phone</div>
-          <div class="font-mono text-[13.5px] text-ink">{{ contact.phone }}</div>
-        </div>
+        <a
+          :href="contact.whatsappUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="no-underline p-5 bg-panel text-ink transition-opacity hover:opacity-80"
+        >
+          <div class="mb-1.5 font-mono text-[11px] text-muted">Telefone / WhatsApp</div>
+          <div class="font-mono text-[13.5px]">{{ contact.whatsapp }}</div>
+        </a>
       </div>
     </div>
   </section>

@@ -54,7 +54,8 @@ export interface Translations {
 
 export interface ContactInfo {
   email: string
-  phone: string
+  whatsapp: string
+  whatsappUrl: string
   linkedin: string
   linkedinUrl: string
   github: string
@@ -77,7 +78,8 @@ export const DATA: CVData = {
   photo: '/profile.jpeg',
   contact: {
     email: 'obssousa@pm.me',
-    phone: '+55 91 98503-7834',
+    whatsapp: '+55 91 98503-7834',
+    whatsappUrl: 'https://wa.me/5591985037834',
     linkedin: 'linkedin.com/in/obssousa',
     linkedinUrl: 'https://linkedin.com/in/obssousa',
     github: 'github.com/obssousa',
