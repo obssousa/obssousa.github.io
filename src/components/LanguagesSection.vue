@@ -10,7 +10,7 @@ import { t, languages } from '../composables/usePortfolioState'
       :visible-once="{ opacity: 1, y: 0, transition: { duration: 700 } }"
       class="mb-[clamp(30px,4vw,48px)] flex items-center gap-3.5 font-mono"
     >
-      <span class="text-[13px] text-accent">04</span>
+      <span class="text-[13px] text-accent">05</span>
       <h2
         class="m-0 font-grotesk font-semibold tracking-[-0.02em] text-[clamp(24px,3.6vw,38px)] text-ink"
       >

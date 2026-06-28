@@ -19,6 +19,13 @@ export interface EarlyRole {
   text: string
 }
 
+export interface Education {
+  degree: string
+  institution: string
+  period: string
+  ongoing?: boolean
+}
+
 export interface Language {
   name: string
   level: string
@@ -36,6 +43,7 @@ export interface Translations {
     experience: string
     earlyCareer: string
     skills: string
+    education: string
     languages: string
     contact: string
   }
@@ -48,6 +56,7 @@ export interface Translations {
   skills: SkillCategory[]
   experience: Experience[]
   early: EarlyRole[]
+  education: Education[]
   languages: Language[]
   contactLede: string
 }
@@ -97,6 +106,7 @@ export const DATA: CVData = {
       experience: 'Experience',
       earlyCareer: 'Early career',
       skills: 'Technical skills',
+      education: 'Education',
       languages: 'Languages',
       contact: 'Contact',
     },
@@ -124,7 +134,7 @@ export const DATA: CVData = {
         label: 'Cloud & DevOps',
         items: ['AWS (CloudFront, S3, Route 53)', 'CodePipeline', 'CloudWatch', 'Firebase', 'CI/CD'],
       },
-      { label: 'Tooling', items: ['Git', 'Figma', 'VTEX IO', 'Highcharts'] },
+      { label: 'Tooling', items: ['Git', 'Figma', 'VTEX IO'] },
     ],
     experience: [
       {
@@ -184,6 +194,24 @@ export const DATA: CVData = {
         text: 'Java/JavaFX desktop and mobile apps with back-end integration for FAPESPA and CEA.',
       },
     ],
+    education: [
+      {
+        degree: 'B.Sc. Computer Engineering',
+        institution: 'Universidade Federal do Pará (UFPA)',
+        period: '2016 — 2022',
+      },
+      {
+        degree: 'Postgraduate (Lato Sensu) — Full Stack Development & Cloud Computing',
+        institution: 'GRAN',
+        period: '2025 — 2026',
+      },
+      {
+        degree: 'Postgraduate — Software Engineering in Applied AI',
+        institution: 'UNIPDS',
+        period: '2026 — 2027',
+        ongoing: true,
+      },
+    ],
     languages: [
       { name: 'Portuguese', level: 'Native', value: 100 },
       { name: 'English', level: 'Professional working', value: 80 },
@@ -201,6 +229,7 @@ export const DATA: CVData = {
       experience: 'Experiência',
       earlyCareer: 'Início de carreira',
       skills: 'Competências técnicas',
+      education: 'Formação',
       languages: 'Idiomas',
       contact: 'Contato',
     },
@@ -234,7 +263,7 @@ export const DATA: CVData = {
         label: 'Cloud & DevOps',
         items: ['AWS (CloudFront, S3, Route 53)', 'CodePipeline', 'CloudWatch', 'Firebase', 'CI/CD'],
       },
-      { label: 'Ferramentas', items: ['Git', 'Figma', 'VTEX IO', 'Highcharts'] },
+      { label: 'Ferramentas', items: ['Git', 'Figma', 'VTEX IO'] },
     ],
     experience: [
       {
@@ -292,6 +321,24 @@ export const DATA: CVData = {
         role: 'Desenvolvedor Front-End · Estágio',
         period: '2017 — 2018',
         text: 'Apps desktop e mobile em Java/JavaFX com integração de back-end para a FAPESPA e a CEA.',
+      },
+    ],
+    education: [
+      {
+        degree: 'Bacharelado em Engenharia de Computação',
+        institution: 'Universidade Federal do Pará (UFPA)',
+        period: '2016 — 2022',
+      },
+      {
+        degree: 'Pós-graduação (Lato Sensu) — Desenvolvimento Full Stack e Computação em Nuvem',
+        institution: 'GRAN',
+        period: '2025 — 2026',
+      },
+      {
+        degree: 'Pós-graduação — Engenharia de Software em IA Aplicada',
+        institution: 'UNIPDS',
+        period: '2026 — 2027',
+        ongoing: true,
       },
     ],
     languages: [

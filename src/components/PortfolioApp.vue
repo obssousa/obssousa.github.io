@@ -5,6 +5,7 @@ import HeroSection from './HeroSection.vue'
 import AboutSection from './AboutSection.vue'
 import ExperienceSection from './ExperienceSection.vue'
 import SkillsSection from './SkillsSection.vue'
+import EducationSection from './EducationSection.vue'
 import LanguagesSection from './LanguagesSection.vue'
 import ContactSection from './ContactSection.vue'
 import FooterSection from './FooterSection.vue'
@@ -22,6 +23,7 @@ import FooterSection from './FooterSection.vue'
       <AboutSection />
       <ExperienceSection />
       <SkillsSection />
+      <EducationSection />
       <LanguagesSection />
       <ContactSection />
     </main>

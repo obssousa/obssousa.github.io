@@ -40,6 +40,9 @@ function handleThemeToggle() {
         <a href="#tskills" class="no-underline text-muted transition-colors hover:opacity-80">
           {{ t.sections.skills }}
         </a>
+        <a href="#tedu" class="no-underline text-muted transition-colors hover:opacity-80">
+          {{ t.sections.education }}
+        </a>
         <a href="#tlang" class="no-underline text-muted transition-colors hover:opacity-80">
           {{ t.sections.languages }}
         </a>
